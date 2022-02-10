@@ -9,11 +9,14 @@
     "start": "web-dev-server"
   },
   "dependencies": {
+    "@open-wc/dev-server-hmr": "^0.1.2",
+    "@web/dev-server-esbuild": "^0.2.16",
     "lit": "^2.0.2"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.4.17",
     "@web/dev-server": "^0.1.28",
+    "@web/dev-server-legacy": "^0.1.7",
     "@webcomponents/webcomponentsjs": "^2.6.0"
   },
   "customElements": "custom-elements.json"
