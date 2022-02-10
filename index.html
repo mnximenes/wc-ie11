@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="Description" content="Put your description here.">
+  <base href="/">
+  <!-- Load polyfills -->
+  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+
+  <!-- Load component when polyfills are definitely ready -->
+  <script type="module">
+  // Take care of cases in which the browser runs this
+  // script before it has finished running
+  // webcomponents-loader.js (e.g. Firefox script execution order)
+  window.WebComponents = window.WebComponents || {
+    waitFor(cb){ addEventListener('WebComponentsReady', cb) }
+  }
+
+  WebComponents.waitFor(async () => {
+    import('./path-to/some-element.js');
+  });
+  </script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #ededed;
+    }
+  </style>
+  <title>wc-ie11</title>
+</head>
+
+<body>
+  <wc-ie11></wc-ie11>
+
+  <script type="module" src="./src/wc-ie11.js"></script>
+</body>
+
+</html>
