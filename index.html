@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="Description" content="Put your description here.">
   <base href="/">
-  <!-- Load polyfills -->
+  <!-- Load polyfills 
   <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-
-  <!-- Load component when polyfills are definitely ready -->
+  -->
+  <script src="https://unpkg.com/browse/@webcomponents/webcomponentsjs@2.6.0/webcomponents-bundle.js"></script>
+  <script src="https://unpkg.com/browse/@webcomponents/webcomponentsjs@2.6.0/webcomponents-loader.js"></script>
+  <!-- Load component when polyfills are definitely ready 
   <script type="module">
   // Take care of cases in which the browser runs this
   // script before it has finished running
@@ -21,7 +23,7 @@
   WebComponents.waitFor(async () => {
     import('./path-to/some-element.js');
   });
-  </script>
+  </script>-->
   <style>
     html,
     body {
